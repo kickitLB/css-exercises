@@ -9,12 +9,21 @@
 </head>
 <body>
   <div class="modal">
-    <div class="icon">!</div>
-    <div class="header">Are you sure you want to do that?</div>
-    <div class="close-button">✖</div>
-    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
-    <button class="continue">Continue</button>
-    <button class="cancel">Cancel</button>
+    <!-- separated the content into 3 major sections: icon-container, mid, and close-button-container. Created an additional flex container inside mid named bottom-button-container to house continue and cancel buttons (though this was not needed in the end product) -->
+    <div class="icon-container">
+      <div class="icon">!</div>
+    </div>
+    <div class="mid">
+      <div class="header">Are you sure you want to do that?</div>
+      <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
+      <div class="bottom-button-container">
+        <button class="continue">Continue</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </div>
+    <div class="close-buttton-container">
+      <div class="close-button">✖</div>
+    </div>
   </div>
 </body>
 </html>
