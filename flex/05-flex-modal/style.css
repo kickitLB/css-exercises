@@ -15,11 +15,28 @@ body {
   justify-content: center;
 }
 
+/* gave the modal a flex box. Each container inside modal (icon,mid, and close button) were to be in a row. A gap was used to separate the contents by 20px. Padding was used to provide additional space around the content. */
 .modal {
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Font was to be bold and slightly larger than bottom text */
+.header {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* the mid section contained the header, text, and buttom buttons. Display was set to flex columns so the contents was stacked on top of another. A gap of 10px was used to separate the content. */
+.mid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
 }
 
 .icon {
@@ -33,6 +50,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .close-button {
