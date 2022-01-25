@@ -2,14 +2,37 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+/* added margins to the img to increase the space between img and text. */
 img {
   width: 100px;
   height: 100px;
+  margin: 15px 20px
 }
 
+/* added a flex container for the contents containing imgs and text. I wanted them to be in a row and line up underneath the title. Space-evenly for the contents to stretch along the page */
+.sect {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* gave each content their own flex containers inside. I used columns to stack the img on top of text. Align-items: center to move text/img along the cross axis to the left. Box-sizing to content-box to control the width and height of the content and make it more compact. Text-align: center to center the text. */
+.sect1, .sect2, .sect3, .sect4 {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  box-sizing: content-box;
+  width: 200px;
+  height:200px;
+  text-align: center;
+}
+
+/* made the title a flex so i can center it to the middle of the page. Edit the margin to give more space between the top of the page and the content below. */
 .title {
   font-size: 36px;
   font-weight: 900;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px 10px 0px;
 }
 
 /* do not edit this footer */
