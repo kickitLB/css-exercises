@@ -29,11 +29,13 @@ body {
 
 /* SOLUTION */
 
+/* correct */
 body {
   display: flex;
   flex-direction: column;
 }
 
+/* correct */
 .header {
   display: flex;
   align-items: center;
@@ -42,44 +44,52 @@ body {
   font-weight: 900;
 }
 
+/* wrote flex: 1 0 auto; */
 .body {
   flex: 1;
   display: flex;
 }
 
+/* incorrect */
 .sidebar {
   flex-shrink: 0;
   padding: 16px;
 }
 
+/* correct */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+/* correct */
 li {
   margin-bottom: 16px;
 }
 
+/* correct */
 a {
   color: white;
   text-decoration: none;
   font-size: 24px;
 }
 
+/* incorrect */
 .container {
   padding: 32px;
   display: flex;
   flex-wrap: wrap;
 }
 
+/* incorrect */
 .card {
   padding: 16px;
   margin: 16px;
   width: 300px;
 }
 
+/* correct */
 .footer {
   display: flex;
   align-items: center;
