@@ -6,21 +6,51 @@ body {
   flex-direction: column;
 }
 
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+a, a:link, a:hover, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 0px 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
 }
 
+.sidebar-cards {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+}
 .sidebar {
   width: 300px;
   background: royalblue;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
 }
 
 .card {
@@ -35,5 +65,7 @@ body {
 .all-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex: 1;
+  margin: 80px 80px;
 }
