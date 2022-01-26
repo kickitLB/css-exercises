@@ -1,21 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* added flex column to the body in order for the content to be stacked on top of each other. Centered the contents using align items and justify content. Used flex:1,1,0 to control the size of every element when growing and shrinking viewport. */
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
 }
 
 img {
   width: 600px;
 }
 
+/* a max height was given to both header and footer. max width of 100vw to take up the whole view port.  */
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  max-height: 5vh;
+  width: 100vw;
+}
+
+/* background color change for the footer only */
+.footer {
+  background: #eeeeee;
+}
+
+
+/* left and right links were given flex row. increased left/right padding because the right links were to close to the end of the page */
+.left-links, .right-links {
+  display: flex;
+  gap: 1.50rem;
+  padding: 0rem 2.5rem;
+}
+
+/* content was given flex column. increase top and bottom margin to push header and footer. Centered the content together. */
+.content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 29rem 0rem 29rem 0rem;
+}
+
+/* text-docoration of none to remove underline. Changed color to increase contrast. */
+a:link {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+
+/* list-style to remove bullet points */
+ul {
+  list-style: none;
+}
+
+
+/* font-weight was increased. padding was increased because button looked too small.  */
 button {
   font-family: Roboto, sans-serif;
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: .625rem;
+  font-weight: 500;
 }
 
 input {
