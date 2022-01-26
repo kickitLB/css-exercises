@@ -39,6 +39,7 @@ img {
 }
 
 /* content was given flex column. increase top and bottom margin to push header and footer. Centered the content together. */
+/* INSTEAD OF ADDING MARGIN PUT FLEX:1 TO INCREASE SIZE */
 .content {
   display: flex;
   flex-flow: column;
