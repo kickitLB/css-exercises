@@ -1,3 +1,4 @@
+/* added display flex column to stack the contects */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -6,20 +7,26 @@ body {
   flex-direction: column;
 }
 
+/* list style:none; to get rid of the bullet points. Padding to give space from the edge of the screen. Margin set to 0 because some reason margin was set to 16px when checking Chrome Dev tools. */
 ul {
   list-style: none;
+  padding-left: 10px;
+  margin: 0px;
 }
 
+/* font size increased to 24px. Margin-bottom of 10px was added to give space inbetween the links */
 li {
-  margin-bottom: 30px;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
+/* text decoration set to none to remove underlines. Color set to white */
 a, a:link, a:hover, a:visited {
   text-decoration: none;
   color: white;
 }
 
+/* display flex was given. align item center to push the header down. Font size of 32px while font weight was set to 900 to bolden the font. Padding was increased to 16px to give space. Edit this is where the margin of 16px came from ul i am assuming */
 .header {
   height: 72px;
   background: darkmagenta;
@@ -31,41 +38,48 @@ a, a:link, a:hover, a:visited {
   padding: 0px 0px 0px 16px;
 }
 
+/* footer was set to flex and centered */
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
   display: flex;
   justify-content: center;
-  padding: 20px 0px;
+  align-items: center;
 }
 
+/* combined sidebar and cards to create one container and set to flex. Direction was set to row with a flex:1 to increase the size and push footer to the bottom */
 .sidebar-cards {
   display: flex;
   flex-direction: row;
-  flex: 1 0 auto;
+  flex: 1;
 }
+
+/* flex shrink of 0 was given to stop the sidebar from shrinking when minimizing the page (gotten from the solutions css). display:column to stack the links. padding of 16px to increase the space between sidebar and header. */
 .sidebar {
   width: 300px;
   background: royalblue;
   display: flex;
   flex-direction: column;
   padding: 16px;
+  flex-shrink: 0;
 }
 
+/* padding of 80px increase the space inside each card.. Height and width was given to make the cards into squares. */
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
-  padding: 32px;
+  padding: 80px;
   height: 250px;
   width: 250px;
 }
 
+/* all the cards were put into a flex box set to wrap. The reason for this is because the cards can wrap to the next line when there is no more space. flex of 1 was given to increase size.  Margin of 80px was given to give space between sidebar and header. gap of 20px to separate the cards.*/
 .all-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   flex: 1;
   margin: 80px 80px;
+  gap: 20px;
 }
